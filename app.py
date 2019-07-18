@@ -15,7 +15,9 @@ def portScan(target, port):
 
 def main():
     host = input("Host address: ")
-    for x in range(65, 534):
+    lowerBound = int(input("Starting Port: "))
+    upperBound = int(input("Endding Port: "))
+    for x in range(lowerBound, upperBound):
         if (portScan(host, x)):
             print("Port ", x, " : Listening")
         else:
