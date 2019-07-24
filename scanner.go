@@ -42,9 +42,9 @@ func main() {
 func run(port int, target string) {
 
 	t := target + ":" + strconv.Itoa(port)
-	con, err := net.DialTimeout("udp", t, 10)
+	con, err := net.Dial("tcp", t)
 	if err != nil {
-		fmt.Printf("Port %v threw error: %v\n", port, err)
+		//fmt.Printf("Port %v threw error: %v\n", port, err)
 	} else {
 		con.Close()
 		fmt.Printf("Port %v is open\n", port)
