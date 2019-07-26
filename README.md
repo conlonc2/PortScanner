@@ -1,3 +1,3 @@
-# Simple Python & Go Port Scanner  
+# Simple Python & Go Port Scanners  
 -----------------------------  
 ## Work in progress
