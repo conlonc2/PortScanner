@@ -42,7 +42,7 @@ func main() {
 func run(port int, target string) {
 
 	t := target + ":" + strconv.Itoa(port)
-	con, err := net.DialTimeout("udp", t, 10)
+	con, err := net.DialTimeout("tcp", t, 10)
 	if err != nil {
 
 	} else {
