@@ -1,0 +1,22 @@
+name: Update project estimates
+
+on:
+  issues:
+    types: [labeled, unlabeled]
+  project_card:
+    types: [moved, created]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    name: Update project column estimates
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use API to calculate and update total estimates in each column
+        id: run
+        uses: ./.github/workflows/
+        with:
+          owner: 'Conlonc2'
+          repo: 'PortScanner'
+          token: "${{ secrets.GITHUB_TOKEN }}"
