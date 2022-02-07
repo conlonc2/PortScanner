@@ -1,3 +1,3 @@
 # Simple Python & Go Port Scanners  
 -----------------------------  
-## Work in progress
+Was testing speeds between Python and Go but archiving for now
